@@ -1,0 +1,23 @@
+DEPTH = 65536;			-- The size of memory in words
+WIDTH = 8;				-- The size of data in bits
+ADDRESS_RADIX = DEC;	-- The radix for address values
+DATA_RADIX = BIN;		-- The radix for data values
+CONTENT					-- Start of (address: data pairs)
+BEGIN
+
+000: 10000011;		-- lw x7,0(x0)
+001: 00100011;
+002: 00000000;
+003: 00000000;
+
+004: 00000011;		-- lw x8,4(x0)
+005: 00100100;
+006: 01000000;
+007: 00000000;
+
+008: 00110011;		-- add x2,x7,x8
+009: 10000001;
+010: 10000011;
+011: 00000000;
+
+END;
