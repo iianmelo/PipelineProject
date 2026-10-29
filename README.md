@@ -38,7 +38,7 @@ O README antigo dizia “21 funções”. O assembler lista 37 mnemônicos. No R
 
 ## Contexto
 
-O projeto ModelSim se chama `ProjetoIHModelSim` e aponta para a pasta de Ianme. Os commits deste repositório são de Ian Melo (`iianmelo`). Os arquivos com data vão de junho a agosto de 2023: [`verif/assembler.py`](verif/assembler.py) está assinado em 16/06/2023 por Nathalia Barbosa (`@nathaliafab`), e o [`transcript`](transcript) do ModelSim é de 10/08/2023. O portfólio trata o trabalho como o projeto acadêmico de 2023.1. O repositório não nomeia a disciplina nem a equipe.
+O projeto ModelSim se chama `ProjetoIHModelSim` e aponta para a pasta de Ianme. Os arquivos com data vão de junho a agosto de 2023: [`verif/assembler.py`](verif/assembler.py) está assinado em 16/06/2023 por Nathalia Barbosa (`@nathaliafab`), e o [`transcript`](transcript) do ModelSim é de 10/08/2023. O portfólio trata o trabalho como o projeto acadêmico de 2023.1. O repositório não nomeia a disciplina nem a equipe.
 
 Dois arquivos trazem autoria de terceiros e não descrevem o grupo do projeto:
 
