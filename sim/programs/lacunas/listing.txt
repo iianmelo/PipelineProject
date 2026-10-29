@@ -1,0 +1,25 @@
+Programa para observar opcodes que o assembler aceita e o RTL não fecha.
+Memória: [0]=5, [4]=3.
+
+0000: 00002083  lw x1, 0(x0)
+0004: 00402103  lw x2, 4(x0)
+0008: 002091b3  sll x3, x1, x2
+0012: 0020d233  srl x4, x1, x2
+0016: 0020b2b3  sltu x5, x1, x2
+0020: 01500313  addi x6, x0, 21
+0024: 00108463  beq x1, x1, 8
+0028: 00208533  add x10, x1, x2
+0032: 000083b3  add x7, x1, x0
+0036: 00109463  bne x1, x1, 8
+0040: 00210433  add x8, x2, x2
+0044: 001084b3  add x9, x1, x1
+
+data memory:
+  [0] = 0x05
+  [1] = 0x00
+  [2] = 0x00
+  [3] = 0x00
+  [4] = 0x03
+  [5] = 0x00
+  [6] = 0x00
+  [7] = 0x00

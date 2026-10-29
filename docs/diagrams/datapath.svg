@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1080" viewBox="0 0 1640 1080">
+<style>text { font-family: Inter, "Noto Sans", sans-serif; }</style>
+<defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#334155"/>
+      </marker>
+      <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#0E7C66"/>
+      </marker>
+      <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#C2410C"/>
+      </marker>
+      <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#9A3B3B"/>
+      </marker>
+    </defs>
+<rect width="1640" height="1080" fill="#F6F3EE"/>
+<text x="40" y="46" fill="#1C2430" font-size="28" font-weight="700" font-family="Inter, sans-serif">Caminho de dados do pipeline</text>
+<text x="40" y="74" fill="#5C6974" font-size="15" font-family="Inter, sans-serif">Cinco estágios, quatro registradores de pipeline e os dois blocos que resolvem dependência de dados. Fonte: design/Datapath.sv, design/RegPack.sv.</text>
+<rect x="36" y="108" width="250" height="760" rx="16" fill="#E7F0FA"/>
+<text x="52" y="134" fill="#1D4E89" font-size="12" font-weight="700">IF</text>
+<text x="52" y="152" fill="#1C2430" font-size="13" font-weight="600">Busca</text>
+<rect x="360" y="108" width="268" height="760" rx="16" fill="#E5F6F0"/>
+<text x="376" y="134" fill="#0E7C66" font-size="12" font-weight="700">ID</text>
+<text x="376" y="152" fill="#1C2430" font-size="13" font-weight="600">Decodificação</text>
+<rect x="700" y="108" width="370" height="760" rx="16" fill="#FBF4E6"/>
+<text x="716" y="134" fill="#A56B00" font-size="12" font-weight="700">EX</text>
+<text x="716" y="152" fill="#1C2430" font-size="13" font-weight="600">Execução</text>
+<rect x="1148" y="108" width="168" height="760" rx="16" fill="#F3EAF8"/>
+<text x="1164" y="134" fill="#6C3B8A" font-size="12" font-weight="700">MEM</text>
+<text x="1164" y="152" fill="#1C2430" font-size="13" font-weight="600">Memória</text>
+<rect x="1388" y="108" width="210" height="760" rx="16" fill="#FBECEA"/>
+<text x="1404" y="134" fill="#9A3B3B" font-size="12" font-weight="700">WB</text>
+<text x="1404" y="152" fill="#1C2430" font-size="13" font-weight="600">Escrita</text>
+
+    <rect x="56" y="168" width="210" height="92" rx="10" fill="#FFFcf8" stroke="#1D4E89" stroke-width="1.4"/>
+    <rect x="56" y="168" width="6" height="92" rx="3" fill="#1D4E89"/>
+    <text x="72" y="192" fill="#1C2430" font-size="14" font-weight="700">PC</text>
+    <text x="70" y="214" fill="#5C6974" font-size="12">9 bits, registrador com stall</text>
+<text x="70" y="230" fill="#5C6974" font-size="12">segura o endereço na load-use</text>
+
+    <rect x="56" y="286" width="210" height="78" rx="10" fill="#FFFcf8" stroke="#1D4E89" stroke-width="1.4"/>
+    <rect x="56" y="286" width="6" height="78" rx="3" fill="#1D4E89"/>
+    <text x="72" y="310" fill="#1C2430" font-size="14" font-weight="700">Somador +4</text>
+    <text x="70" y="332" fill="#5C6974" font-size="12">próximo endereço sequencial</text>
+
+    <rect x="56" y="390" width="210" height="96" rx="10" fill="#FFFcf8" stroke="#1D4E89" stroke-width="1.4"/>
+    <rect x="56" y="390" width="6" height="96" rx="3" fill="#1D4E89"/>
+    <text x="72" y="414" fill="#1C2430" font-size="14" font-weight="700">MUX do PC</text>
+    <text x="70" y="436" fill="#5C6974" font-size="12">0 · PC+4</text>
+<text x="70" y="452" fill="#5C6974" font-size="12">1 · alvo do branch (BrPC)</text>
+
+    <rect x="56" y="620" width="210" height="150" rx="10" fill="#FFFcf8" stroke="#1D4E89" stroke-width="1.4"/>
+    <rect x="56" y="620" width="6" height="150" rx="3" fill="#1D4E89"/>
+    <text x="72" y="644" fill="#1C2430" font-size="14" font-weight="700">Memória de instruções</text>
+    <text x="70" y="666" fill="#5C6974" font-size="12">quatro altsyncram de 64 KiB × 8</text>
+<text x="70" y="682" fill="#5C6974" font-size="12">inicialização: instruction.mif</text>
+<text x="70" y="698" fill="#5C6974" font-size="12">endereço de leitura = PC</text>
+<text x="70" y="714" fill="#5C6974" font-size="12">clock invertido</text>
+
+    <rect x="380" y="168" width="228" height="132" rx="10" fill="#FFFcf8" stroke="#0E7C66" stroke-width="1.4"/>
+    <rect x="380" y="168" width="6" height="132" rx="3" fill="#0E7C66"/>
+    <text x="396" y="192" fill="#1C2430" font-size="14" font-weight="700">Unidade de controle</text>
+    <text x="394" y="214" fill="#5C6974" font-size="12">opcode vindo de IF/ID</text>
+<text x="394" y="230" fill="#5C6974" font-size="12">gera ALUSrc, MemtoReg,</text>
+<text x="394" y="246" fill="#5C6974" font-size="12">RegWrite, MemRead, MemWrite,</text>
+<text x="394" y="262" fill="#5C6974" font-size="12">ALUOp e Branch</text>
+
+    <rect x="380" y="324" width="228" height="124" rx="10" fill="#FFFcf8" stroke="#0E7C66" stroke-width="1.4"/>
+    <rect x="380" y="324" width="6" height="124" rx="3" fill="#0E7C66"/>
+    <text x="396" y="348" fill="#1C2430" font-size="14" font-weight="700">Banco de registradores</text>
+    <text x="394" y="370" fill="#5C6974" font-size="12">32 × 32 bits</text>
+<text x="394" y="386" fill="#5C6974" font-size="12">duas leituras combinacionais</text>
+<text x="394" y="402" fill="#5C6974" font-size="12">escrita na descida do clock</text>
+
+    <rect x="380" y="472" width="228" height="100" rx="10" fill="#FFFcf8" stroke="#0E7C66" stroke-width="1.4"/>
+    <rect x="380" y="472" width="6" height="100" rx="3" fill="#0E7C66"/>
+    <text x="396" y="496" fill="#1C2430" font-size="14" font-weight="700">Gerador de imediato</text>
+    <text x="394" y="518" fill="#5C6974" font-size="12">load I, store S e branch B</text>
+<text x="394" y="534" fill="#5C6974" font-size="12">demais formatos caem em zero</text>
+
+    <rect x="380" y="640" width="228" height="128" rx="10" fill="#FFFcf8" stroke="#0E7C66" stroke-width="1.4"/>
+    <rect x="380" y="640" width="6" height="128" rx="3" fill="#0E7C66"/>
+    <text x="396" y="664" fill="#1C2430" font-size="14" font-weight="700">Detecção de hazard</text>
+    <text x="394" y="686" fill="#5C6974" font-size="12">olha o load que está em EX</text>
+<text x="394" y="702" fill="#5C6974" font-size="12">compara rd com rs1 e rs2</text>
+<text x="394" y="718" fill="#5C6974" font-size="12">de quem está em ID</text>
+<text x="394" y="734" fill="#5C6974" font-size="12">produz Reg_Stall</text>
+
+    <rect x="720" y="168" width="168" height="128" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="720" y="168" width="6" height="128" rx="3" fill="#A56B00"/>
+    <text x="736" y="192" fill="#1C2430" font-size="14" font-weight="700">Forwarding</text>
+    <text x="734" y="214" fill="#5C6974" font-size="12">EX/MEM tem prioridade</text>
+<text x="734" y="230" fill="#5C6974" font-size="12">sobre MEM/WB</text>
+<text x="734" y="246" fill="#5C6974" font-size="12">não encaminha rd = 0</text>
+
+    <rect x="908" y="168" width="142" height="128" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="908" y="168" width="6" height="128" rx="3" fill="#A56B00"/>
+    <text x="924" y="192" fill="#1C2430" font-size="14" font-weight="700">MUX A / MUX B</text>
+    <text x="922" y="214" fill="#5C6974" font-size="12">00 · banco</text>
+<text x="922" y="230" fill="#5C6974" font-size="12">01 · write-back</text>
+<text x="922" y="246" fill="#5C6974" font-size="12">10 · ALU anterior</text>
+
+    <rect x="720" y="322" width="330" height="72" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="720" y="322" width="6" height="72" rx="3" fill="#A56B00"/>
+    <text x="736" y="346" fill="#1C2430" font-size="14" font-weight="700">MUX ALUSrc</text>
+    <text x="734" y="368" fill="#5C6974" font-size="12">segundo operando: registrador encaminhado ou imediato</text>
+
+    <rect x="720" y="420" width="168" height="118" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="720" y="420" width="6" height="118" rx="3" fill="#A56B00"/>
+    <text x="736" y="444" fill="#1C2430" font-size="14" font-weight="700">ALU</text>
+    <text x="734" y="466" fill="#5C6974" font-size="12">AND, OR, XOR</text>
+<text x="734" y="482" fill="#5C6974" font-size="12">ADD, SUB</text>
+<text x="734" y="498" fill="#5C6974" font-size="12">igualdade para beq</text>
+
+    <rect x="908" y="420" width="142" height="118" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="908" y="420" width="6" height="118" rx="3" fill="#A56B00"/>
+    <text x="924" y="444" fill="#1C2430" font-size="14" font-weight="700">Controle da ALU</text>
+    <text x="922" y="466" fill="#5C6974" font-size="12">ALUOp + funct3</text>
+<text x="922" y="482" fill="#5C6974" font-size="12">+ funct7</text>
+<text x="922" y="498" fill="#5C6974" font-size="12">código de 4 bits</text>
+
+    <rect x="720" y="566" width="330" height="132" rx="10" fill="#FFFcf8" stroke="#A56B00" stroke-width="1.4"/>
+    <rect x="720" y="566" width="6" height="132" rx="3" fill="#A56B00"/>
+    <text x="736" y="590" fill="#1C2430" font-size="14" font-weight="700">Unidade de branch</text>
+    <text x="734" y="612" fill="#5C6974" font-size="12">decisão no estágio EX</text>
+<text x="734" y="628" fill="#5C6974" font-size="12">tomado se Branch e ALU[0]</text>
+<text x="734" y="644" fill="#5C6974" font-size="12">alvo = PC da instrução + imediato</text>
+<text x="734" y="660" fill="#5C6974" font-size="12">PcSel descarta IF e ID</text>
+
+    <rect x="1164" y="360" width="140" height="168" rx="10" fill="#FFFcf8" stroke="#6C3B8A" stroke-width="1.4"/>
+    <rect x="1164" y="360" width="6" height="168" rx="3" fill="#6C3B8A"/>
+    <text x="1180" y="384" fill="#1C2430" font-size="14" font-weight="700">Memória de dados</text>
+    <text x="1178" y="406" fill="#5C6974" font-size="12">quatro bancos</text>
+<text x="1178" y="422" fill="#5C6974" font-size="12">64 KiB × 8</text>
+<text x="1178" y="438" fill="#5C6974" font-size="12">data.mif</text>
+<text x="1178" y="454" fill="#5C6974" font-size="12">addr = ALU[8:0]</text>
+<text x="1178" y="470" fill="#5C6974" font-size="12">lw / sw de palavra</text>
+
+    <rect x="1408" y="360" width="176" height="150" rx="10" fill="#FFFcf8" stroke="#9A3B3B" stroke-width="1.4"/>
+    <rect x="1408" y="360" width="6" height="150" rx="3" fill="#9A3B3B"/>
+    <text x="1424" y="384" fill="#1C2430" font-size="14" font-weight="700">MUX MemtoReg</text>
+    <text x="1422" y="406" fill="#5C6974" font-size="12">0 · resultado da ALU</text>
+<text x="1422" y="422" fill="#5C6974" font-size="12">1 · dado lido</text>
+<text x="1422" y="438" fill="#5C6974" font-size="12">esse é o WB_Data</text>
+<rect x="308" y="178" width="34" height="640" rx="8" fill="#243044"/>
+<text x="325" y="470" fill="#F7F5F2" font-size="13" font-weight="700" font-family="Inter, sans-serif" transform="rotate(-90 325 470)" text-anchor="middle">IF/ID</text>
+<text x="325" y="860" fill="#243044" font-size="13" font-weight="700" font-family="Inter, sans-serif" text-anchor="middle">A</text>
+<rect x="648" y="178" width="34" height="640" rx="8" fill="#243044"/>
+<text x="665" y="470" fill="#F7F5F2" font-size="13" font-weight="700" font-family="Inter, sans-serif" transform="rotate(-90 665 470)" text-anchor="middle">ID/EX</text>
+<text x="665" y="860" fill="#243044" font-size="13" font-weight="700" font-family="Inter, sans-serif" text-anchor="middle">B</text>
+<rect x="1096" y="178" width="34" height="640" rx="8" fill="#243044"/>
+<text x="1113" y="470" fill="#F7F5F2" font-size="13" font-weight="700" font-family="Inter, sans-serif" transform="rotate(-90 1113 470)" text-anchor="middle">EX/MEM</text>
+<text x="1113" y="860" fill="#243044" font-size="13" font-weight="700" font-family="Inter, sans-serif" text-anchor="middle">C</text>
+<rect x="1336" y="178" width="34" height="640" rx="8" fill="#243044"/>
+<text x="1353" y="470" fill="#F7F5F2" font-size="13" font-weight="700" font-family="Inter, sans-serif" transform="rotate(-90 1353 470)" text-anchor="middle">MEM/WB</text>
+<text x="1353" y="860" fill="#243044" font-size="13" font-weight="700" font-family="Inter, sans-serif" text-anchor="middle">D</text>
+<path d="M 1496 510 L 1496 960 L 494 960 L 494 448" fill="none" stroke="#0E7C66" stroke-width="1.7" marker-end="url(#arrG)"/>
+<text x="720" y="984" fill="#0E7C66" font-size="12">dado de escrita, também usado no forwarding de write-back</text>
+<path d="M 1096 500 L 1056 500 L 1056 232 L 1050 232" fill="none" stroke="#0E7C66" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#arrG)"/>
+<text x="1072" y="640" fill="#0E7C66" font-size="11" transform="rotate(-90 1072 640)">ALU de EX/MEM</text>
+<path d="M 380 704 L 296 704 L 296 214 L 266 214" fill="none" stroke="#C2410C" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrO)"/>
+<path d="M 720 566 L 708 566 L 708 164 L 22 164 L 22 438 L 56 438" fill="none" stroke="#9A3B3B" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrR)"/>
+<text x="70" y="380" fill="#9A3B3B" font-size="12">PcSel</text>
+<path d="M 161 364 L 161 390" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M 161 260 L 161 286" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+<g font-family="Inter, sans-serif" font-size="12" fill="#5C6974">
+      <text x="40" y="1050">Registradores de pipeline em RegPack.sv: A = IF/ID, B = ID/EX, C = EX/MEM, D = MEM/WB. O controle nasce em ID e viaja dentro de B, C e D. A decisão de branch é no EX, com penalidade de dois ciclos quando o desvio é tomado.</text>
+    </g>
+</svg>

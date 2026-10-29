@@ -1,3 +1,7 @@
+# Verificação
+
+O fluxo com Icarus Verilog, que não precisa do ModelSim nem da biblioteca `altera_mf`, está na raiz: [`sim/run_icarus.sh`](../sim/run_icarus.sh). O programa abaixo é o que está gravado em [`instruction.mif`](../instruction.mif).
+
 # 📝 Como Inicializar a Memória de Instruções
 
 1. Crie um arquivo chamado `instructions.txt` no mesmo diretório do script [`assembler.py`](assembler.py).

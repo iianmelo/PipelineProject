@@ -28,7 +28,10 @@ module datamemory #(
       .Wr(Wr)
   );
 
-  always_ff @(*) begin
+  // Combinational decode of the byte enables and the read data. The original
+  // source used always_ff @(*), which is not a legal edge-sensitive procedure
+  // and is rejected by Icarus Verilog.
+  always @(*) begin
     raddress = {{22{1'b0}}, a};
     waddress = {{22{1'b0}}, {a[8:2], {2{1'b0}}}};
     Datain = wd;

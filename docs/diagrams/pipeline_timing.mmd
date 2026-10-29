@@ -1,0 +1,30 @@
+%% Carta de tempo do programa original, conferida com o VCD.
+%% O desenho usado no README é docs/diagrams/pipeline_timing.svg.
+%% Colunas: estado depois da subida de clk, a partir de 5 ns.
+
+gantt
+    title instruction.mif — lw x7 / lw x8 / add x2
+    dateFormat X
+    axisFormat %s
+    section IF
+    lw x7, 0(x0)     :0, 1
+    lw x8, 4(x0)     :1, 1
+    add x2, x7, x8   :2, 1
+    section ID
+    lw x7, 0(x0)     :1, 1
+    lw x8, 4(x0)     :2, 1
+    add x2, x7, x8   :3, 2
+    section EX
+    lw x7, 0(x0)     :2, 1
+    lw x8, 4(x0)     :3, 1
+    bolha            :4, 1
+    add x2, x7, x8   :5, 1
+    section MEM
+    lw x7, 0(x0)     :3, 1
+    lw x8, 4(x0)     :4, 1
+    bolha            :5, 1
+    add x2, x7, x8   :6, 1
+    section WB
+    lw x7, 0(x0)     :4, 1
+    lw x8, 4(x0)     :5, 1
+    add x2, x7, x8   :7, 1
