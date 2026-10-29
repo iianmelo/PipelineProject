@@ -18,6 +18,9 @@ module tb_top;
   localparam CLKPERIOD = 10;
   localparam CLKDELAY = CLKPERIOD / 2;
 
+  // Icarus flow: vvp -n tb.vvp +vcd=build/pipeline.vcd
+  reg [1023:0] vcd_file;
+
   riscv riscV (
       .clk(tb_clk),
       .reset(reset),
@@ -33,6 +36,17 @@ module tb_top;
   );
 
   initial begin
+    if ($value$plusargs("vcd=%s", vcd_file)) begin
+      $dumpfile(vcd_file);
+      $dumpvars(0, tb_clk, reset, tb_WB_Data);
+      $dumpvars(0, reg_num, reg_data, reg_write_sig, wr, rd, addr, wr_data, rd_data);
+      $dumpvars(0, riscV.dp.PC, riscV.dp.Instr, riscV.dp.Next_PC, riscV.dp.PCPlus4);
+      $dumpvars(0, riscV.dp.A, riscV.dp.B, riscV.dp.C, riscV.dp.D);
+      $dumpvars(0, riscV.dp.Reg_Stall, riscV.dp.PcSel, riscV.dp.ALUResult);
+      $dumpvars(0, riscV.dp.FAmuxSel, riscV.dp.FBmuxSel, riscV.dp.SrcB);
+      $dumpvars(0, riscV.opcode, riscV.Operation, riscV.Funct3, riscV.Funct7);
+    end
+
     tb_clk = 0;
     reset  = 1;
     #(CLKPERIOD);

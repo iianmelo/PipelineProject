@@ -1,0 +1,26 @@
+Programa de demonstração (não é o instruction.mif original).
+Memória: [0]=5, [4]=3. Exercita stall de load-use, forwarding,
+store, beq não tomado e beq tomado.
+
+0000: 00002083  lw x1, 0(x0)
+0004: 00402103  lw x2, 4(x0)
+0008: 00208463  beq x1, x2, 8
+0012: 002081b3  add x3, x1, x2
+0016: 40218233  sub x4, x3, x2
+0020: 0020f2b3  and x5, x1, x2
+0024: 0020e333  or x6, x1, x2
+0028: 0020c3b3  xor x7, x1, x2
+0032: 00302423  sw x3, 8(x0)
+0036: 00120463  beq x4, x1, 8
+0040: 00108433  add x8, x1, x1
+0044: 002084b3  add x9, x1, x2
+
+data memory:
+  [0] = 0x05
+  [1] = 0x00
+  [2] = 0x00
+  [3] = 0x00
+  [4] = 0x03
+  [5] = 0x00
+  [6] = 0x00
+  [7] = 0x00

@@ -1,0 +1,69 @@
+%% Fonte editável do caminho de dados.
+%% O desenho usado no README é docs/diagrams/datapath.svg (gerado por sim/draw_datapath.py).
+flowchart LR
+  subgraph IF["IF · busca"]
+    PC["PC 9 bits<br/>stall segura o valor"]
+    ADD["+4"]
+    PCMUX["MUX do PC<br/>0: PC+4 · 1: BrPC"]
+    IMEM["Memória de instruções<br/>instruction.mif"]
+    PC --> ADD --> PCMUX --> PC
+    PC --> IMEM
+  end
+
+  A["IF/ID · registrador A"]
+  IMEM --> A
+
+  subgraph ID["ID · decodificação"]
+    CTRL["Controle<br/>opcode → sinais"]
+    RF["Banco 32 × 32<br/>escrita na descida"]
+    IMM["imm_Gen<br/>load, store, branch"]
+    HAZ["Detecção de hazard<br/>load-use → stall"]
+  end
+  A --> CTRL
+  A --> RF
+  A --> IMM
+  A --> HAZ
+
+  B["ID/EX · registrador B"]
+  CTRL --> B
+  RF --> B
+  IMM --> B
+
+  subgraph EX["EX · execução"]
+    FWD["Forwarding<br/>EX/MEM antes de MEM/WB"]
+    MX["MUX A / MUX B"]
+    SRC["MUX ALUSrc"]
+    ALU["ALU<br/>AND OR XOR ADD SUB BEQ"]
+    ALUCTRL["Controle da ALU"]
+    BR["Branch unit<br/>PcSel e alvo"]
+    FWD --> MX --> SRC --> ALU
+    ALUCTRL --> ALU
+    ALU --> BR
+  end
+  B --> MX
+  B --> ALUCTRL
+  B --> BR
+
+  C["EX/MEM · registrador C"]
+  ALU --> C
+
+  subgraph MEM["MEM · memória"]
+    DMEM["Memória de dados<br/>data.mif · ALU 8:0"]
+  end
+  C --> DMEM
+
+  D["MEM/WB · registrador D"]
+  DMEM --> D
+
+  subgraph WB["WB · escrita"]
+    WBMUX["MUX MemtoReg<br/>ALU ou dado lido"]
+  end
+  D --> WBMUX --> RF
+
+  C -. forwarding .-> MX
+  WBMUX -. forwarding .-> MX
+  HAZ -. stall .-> PC
+  HAZ -. bolha .-> B
+  BR -. PcSel .-> PCMUX
+  BR -. flush .-> A
+  BR -. flush .-> B

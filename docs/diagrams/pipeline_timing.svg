@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1466" height="552" viewBox="0 0 1466 552">
+<style>text { font-family: Inter, 'Noto Sans', sans-serif; }</style>
+<rect width="100%" height="100%" fill="#F7F5F2"/>
+<text x="36" y="42" fill="#1C2430" font-size="26" font-weight="700">Pipeline do programa em instruction.mif</text>
+<text x="36" y="70" fill="#5E6A75" font-size="14">lw x7, 0(x0)    ·    lw x8, 4(x0)    ·    add x2, x7, x8        memória: [0] = 1, [4] = 2</text>
+<text x="28" y="152" fill="#1D4E89" font-size="15" font-weight="700">IF</text>
+<rect x="86" y="118" width="1344" height="58" fill="#FBF9F6"/>
+<text x="28" y="210" fill="#0E7C66" font-size="15" font-weight="700">ID</text>
+<text x="28" y="268" fill="#8A5A00" font-size="15" font-weight="700">EX</text>
+<rect x="86" y="234" width="1344" height="58" fill="#FBF9F6"/>
+<text x="28" y="326" fill="#6C3B8A" font-size="15" font-weight="700">MEM</text>
+<text x="28" y="384" fill="#8C2F39" font-size="15" font-weight="700">WB</text>
+<rect x="86" y="350" width="1344" height="58" fill="#FBF9F6"/>
+<text x="170.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">0</text>
+<text x="170.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">5 ns</text>
+<rect x="94" y="126" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="170.0" y="154" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x7, 0(x0)</text>
+<rect x="94" y="184" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="170.0" y="212" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="94" y="242" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="170.0" y="270" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="94" y="300" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="170.0" y="328" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="94" y="358" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="170.0" y="386" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<text x="338.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">1</text>
+<text x="338.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">15 ns</text>
+<rect x="262" y="126" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="338.0" y="154" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x8, 4(x0)</text>
+<rect x="262" y="184" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="338.0" y="212" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x7, 0(x0)</text>
+<rect x="262" y="242" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="338.0" y="270" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="262" y="300" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="338.0" y="328" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="262" y="358" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="338.0" y="386" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<text x="506.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">2</text>
+<text x="506.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">25 ns</text>
+<rect x="430" y="126" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="506.0" y="154" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<rect x="430" y="184" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="506.0" y="212" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x8, 4(x0)</text>
+<rect x="430" y="242" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="506.0" y="270" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x7, 0(x0)</text>
+<rect x="430" y="300" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="506.0" y="328" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="430" y="358" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="506.0" y="386" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<text x="674.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">3</text>
+<text x="674.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">35 ns</text>
+<rect x="598" y="126" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="674.0" y="154" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="598" y="184" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="674.0" y="212" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<rect x="598" y="242" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="674.0" y="270" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x8, 4(x0)</text>
+<rect x="598" y="300" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="674.0" y="328" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x7, 0(x0)</text>
+<rect x="598" y="358" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="674.0" y="386" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<text x="674.0" y="426" text-anchor="middle" fill="#9A3412" font-size="11" font-weight="650">stall</text>
+<text x="842.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">4</text>
+<text x="842.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">45 ns</text>
+<rect x="766" y="126" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="842.0" y="154" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="766" y="184" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="842.0" y="212" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<rect x="766" y="242" width="152" height="42" rx="8" fill="#E7E1D6"/>
+<text x="842.0" y="270" text-anchor="middle" fill="#6B645B" font-size="13" font-weight="600">bolha</text>
+<rect x="766" y="300" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="842.0" y="328" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x8, 4(x0)</text>
+<rect x="766" y="358" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="842.0" y="378" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x7, 0(x0)</text>
+<text x="842.0" y="394" text-anchor="middle" fill="#1D4E89" font-size="11">x7 ← 1</text>
+<text x="1010.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">5</text>
+<text x="1010.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">55 ns</text>
+<rect x="934" y="126" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1010.0" y="154" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="934" y="184" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1010.0" y="212" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="934" y="242" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="1010.0" y="270" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<rect x="934" y="300" width="152" height="42" rx="8" fill="#E7E1D6"/>
+<text x="1010.0" y="328" text-anchor="middle" fill="#6B645B" font-size="13" font-weight="600">bolha</text>
+<rect x="934" y="358" width="152" height="42" rx="8" fill="#D9E7F6"/>
+<text x="1010.0" y="378" text-anchor="middle" fill="#1D4E89" font-size="13" font-weight="600">lw x8, 4(x0)</text>
+<text x="1010.0" y="394" text-anchor="middle" fill="#1D4E89" font-size="11">x8 ← 2</text>
+<text x="1010.0" y="426" text-anchor="middle" fill="#9A3412" font-size="11" font-weight="650">fwd B·WB</text>
+<text x="1178.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">6</text>
+<text x="1178.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">65 ns</text>
+<rect x="1102" y="126" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1178.0" y="154" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1102" y="184" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1178.0" y="212" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1102" y="242" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1178.0" y="270" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1102" y="300" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="1178.0" y="328" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<rect x="1102" y="358" width="152" height="42" rx="8" fill="#E7E1D6"/>
+<text x="1178.0" y="386" text-anchor="middle" fill="#6B645B" font-size="13" font-weight="600">bolha</text>
+<text x="1346.0" y="90" text-anchor="middle" fill="#1C2430" font-size="14" font-weight="700">7</text>
+<text x="1346.0" y="108" text-anchor="middle" fill="#5E6A75" font-size="12">75 ns</text>
+<rect x="1270" y="126" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1346.0" y="154" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1270" y="184" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1346.0" y="212" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1270" y="242" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1346.0" y="270" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1270" y="300" width="152" height="42" rx="8" fill="#F3EFE8"/>
+<text x="1346.0" y="328" text-anchor="middle" fill="#A39A8C" font-size="13" font-weight="600">—</text>
+<rect x="1270" y="358" width="152" height="42" rx="8" fill="#F8E7C4"/>
+<text x="1346.0" y="378" text-anchor="middle" fill="#8A5A00" font-size="13" font-weight="600">add x2, x7, x8</text>
+<text x="1346.0" y="394" text-anchor="middle" fill="#8A5A00" font-size="11">x2 ← 3</text>
+<text x="36" y="456" fill="#5E6A75" font-size="13">Cada coluna é o estado depois da subida do clk. IF é a instrução que a memória apresenta no meio do ciclo, depois da descida.</text>
+<text x="36" y="478" fill="#5E6A75" font-size="13">Ciclo em que EX contém lw x8 e ID contém add: stall de load-use. No ciclo seguinte o controle de EX é zerado (bolha) e o add permanece em ID.</text>
+<text x="36" y="500" fill="#5E6A75" font-size="13">Quando add está em EX, B vem do write-back (o lw de x8). A ALU já mostra 3. No WB seguinte, x2 é escrito com 3.</text>
+<text x="36" y="522" fill="#5E6A75" font-size="13">x7 ← 1 em 45 ns, x8 ← 2 em 55 ns, x2 ← 3 em 75 ns — os mesmos horários do transcript ModelSim de 10/08/2023.</text>
+</svg>
